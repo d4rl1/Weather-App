@@ -76,7 +76,7 @@ public class SettingsFragment extends Fragment {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
         shareIntent.putExtra(Intent.EXTRA_TEXT,
-                "Check out WeatherNow! 🌤 " + GITHUB_URL);
+                "Check out WeatherNow! " + GITHUB_URL);
 
         if (shareIntent.resolveActivity(requireActivity().getPackageManager()) != null) {
             startActivity(Intent.createChooser(shareIntent, "Share WeatherNow via..."));
